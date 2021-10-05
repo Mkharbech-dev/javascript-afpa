@@ -19,20 +19,20 @@
 // }
 // ********************version2**************************
 
-// var nbr = prompt('saisir un nombre')
+var nbr = prompt('saisir un nombre')
 
-// var estPremier = true;
-// for (var i = 2; i< nbr ; i++){
-//         if(nbr%i == 0){
-//             console.log(nbr + " n'est pas premier car est divisible par ", i)
-//             estPremier = false
-//             break
-//         }
-// }
+var estPremier = true;
+for (var i = 2; i< nbr ; i++){
+        if(nbr%i == 0){
+            console.log(nbr + " n'est pas premier car est divisible par ", i)
+            estPremier = false
+            break
+        }
+}
 
-// if(estPremier){
-//     console.log('est premier')
-// }
+if(estPremier){
+    console.log('est premier')
+}
 
 // ********************version3**************************
 // var nbr = prompt('saisir un nombre')

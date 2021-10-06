@@ -10,7 +10,7 @@ let toutesLesTaches = [];
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
-    console.log(input.value);
+    // console.log(input.value);
     // methode Trim enleve tout espace avant ou apres le text
     const text = input.value.trim();
     if(text !== ''){

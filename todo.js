@@ -18,7 +18,6 @@ form.addEventListener('submit', (e)=>{
         input.value = '';
     }  
 })
-
 function inserUneTache(text){
     const objet = {
         text,
@@ -26,7 +25,6 @@ function inserUneTache(text){
     }
     afficherListe(objet)
 }
-
 function afficherListe(objet){
     const item = document.createElement('li')
     item.setAttribute('data-key', objet.id)
@@ -41,22 +39,32 @@ function afficherListe(objet){
     item.appendChild(txt)
 
     const btn = document.createElement('button')
-    // btn.setAttribute('onClick', supprimTache())
     btn.addEventListener('click', supprimTache)
 
     const img = document.createElement('img')
     img.setAttribute('src', "./ressources/fermer.svg")
+    img.addEventListener('click', supprimTache)
     btn.appendChild(img)
     item.appendChild(btn)
 
     liste.appendChild(item)
     toutesLesTaches.push(item)
 }
-
 function tacheFaite(event){
     event.target.parentNode.classList.toggle('finDeTache')
 }
 
-function supprimTache (e){
-    e.target.parentNode.classList.add('suprripe')
-}
+
+
+function supprimTache(e) {
+
+    toutesLesTaches.forEach(el => {
+  
+      if(e.target.parentNode.getAttribute('data-key') === el.getAttribute('data-key')){
+        el.remove();
+        toutesLesTaches = toutesLesTaches.filter(li => li.dataset.key !== el.dataset.key);
+      }
+  
+    })
+  
+  }

@@ -37,6 +37,7 @@ function afficherTache(objet){
 
     const croix = document.createElement('img')
     croix.setAttribute('src', './ressources/images.png')
+    croix.addEventListener('click', supprimTache)
     item.appendChild(croix)
 
     blocs.appendChild(item);
@@ -46,6 +47,17 @@ function afficherTache(objet){
 function rayerText(e){
     e.target.parentNode.classList.toggle('rayer')
 }
+function supprimTache(e) {
 
+    toutesLesTaches.forEach(el => {
+  
+      if(e.target.parentNode.getAttribute('data-key') === el.getAttribute('data-key')){
+        el.remove();
+        toutesLesTaches = toutesLesTaches.filter(li => li.dataset.key !== el.dataset.key);
+      }
+  
+    })
+  
+  }
 
 

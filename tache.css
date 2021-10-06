@@ -1,13 +1,17 @@
-.container{
+body{
     width: 100%;
     margin: auto;
+    background: black;
 }
 h1{
     text-align: center;
     font-size: 40px;
+    color: white;
 }
 label{
     font-size: 18px;
+    color: white;
+    font-size: 25px;
 }
 .form{
     width: 60%;
@@ -25,12 +29,17 @@ input{
         margin-right: 10px; 
        
 }
+li input {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+}
 .blocs{
     display: flex;
-    width: 60%;
+    width: 62%;
     margin: auto;
     height: 100vh;
-    background: rgb(34, 33, 33);
+    background: black;
     display: block;
     padding: 10px;
  
@@ -65,6 +74,7 @@ img{
     border-radius: 50%;
     position: relative;
     cursor: pointer;
+    border: 1px solid black;
 }
 
 ul{

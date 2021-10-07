@@ -50,14 +50,14 @@ function rayerText(e){
 function supprimTache(e) {
 
     toutesLesTaches.forEach(el => {
-  
+
       if(e.target.parentNode.getAttribute('data-key') === el.getAttribute('data-key')){
         el.remove();
         toutesLesTaches = toutesLesTaches.filter(li => li.dataset.key !== el.dataset.key);
       }
-  
+
     })
-  
+
   }
 
 
